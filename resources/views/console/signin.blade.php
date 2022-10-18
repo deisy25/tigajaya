@@ -2,7 +2,7 @@
 
 @section ('content')
 <section class="w3-padding">
-   <form method="post" action="/console/signin" novalidate>
+   <form class='signin' method="post" action="/console/signin" novalidate>
 
       <?= csrf_field() ?>
 

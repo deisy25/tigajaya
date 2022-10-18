@@ -19,9 +19,11 @@
             
             <a href="/buy/<?= $product->id?>" class='btn'>Buy Now</a>
          </div>
-         <form>
-            <input type='text' value="<?= $product->id ?>" name="productId">
-            <a href="" class='btn'>Add to Wish List</a>
+         <form action="{{url('/addtolist')}}">
+         <?= csrf_field() ?>
+            <input type='hidden' value="<?= auth()->user()->id ?>" name="userId">
+            <input type='hidden' value="<?= $product->id ?>" name="productId">
+            <input type='submit' class='btn' value='Add to Wish List'>
          </form>
          <div>
             <a href="" class='btn'>Add To Cart Now</a>
@@ -36,8 +38,8 @@
       </div>
    </div>  
    
-   <!-- <h3>Review</h3> -->
+   <h3>Review</h3>
    {{-- <?= $review->id ?> --}}
-      
+   
 </section>
 @endsection

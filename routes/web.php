@@ -56,13 +56,20 @@ Route::get('/buy/{id}', function ($id){
 
 Route::get('/detail/{id}', function ($id){
    $product=Product::find($id);
-   $review=Review::where('product_id',$id)->get();
 
    return view('detail', [
       'product' => $product,
-      'review' => $review,
    ]);
 });
+
+// Route::get('/review/{id}', function ($id){
+//    // $review=Review::where('product_id', $id)->get();
+
+//    return view('review',[
+//       'review' => Review::All(),
+//    ]);
+// });
+
 
 Route::get('addtolist','HomeController@wishlist');
 
@@ -70,8 +77,12 @@ Route::get('/wish', function (){
    $wishlist=Wishlist::where('user_id',auth()->user()->id)->get();
 
    return view('wish', [
-      'wishlist' => $wishlist
+      'wishlist' => $wishlist,
    ]);
+});
+
+Route::get('/confirm', function(){
+   return view('confirm');
 });
 
 Route::get('/console/logout', [ConsoleController::class, 'logout'])->middleware('auth');

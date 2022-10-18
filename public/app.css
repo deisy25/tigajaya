@@ -47,6 +47,15 @@ img.logo{
    color:#C47530;
 }
 
+.signin{
+   margin-left: 35%;
+   margin-right:35%;
+   width: 50%;
+}
+
+.signin button{
+   margin-left: 0.4em;
+}
 .manage{
    display: grid;
    grid-template-columns: repeat(3,1fr);
@@ -120,6 +129,20 @@ button{
    content: "\f011";
    margin-right: 1em;
 }
+
+.card{
+   margin-left: 40%;
+   /* margin-right:35%; */
+   width: 50%;
+}
+
+.card button{
+   margin-left: -0.5em;
+   margin-top: 1em;
+   width: 50%;
+}
+
+
 /* banner */
 .slider{
    max-width: 100%;
@@ -258,6 +281,13 @@ main .added{
    /* margin-bottom: 3em; */
 }
 
+.detail form{
+   margin-top: -1em;
+}
+
+.detail input[type='submit']{
+   border: none;
+}
 summary {
    display: block;
    margin: 0 auto;
@@ -296,6 +326,44 @@ summary > * {
    display: inline;
 }
   
+/* buy */
+.buyReview h3{
+   margin-left: 1em;
+}
+
+.buyReview .detail{
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   margin-left: 1em;
+   margin-right: 2em;
+}
+
+.buyReview .detail h2{
+   font-size: 1.2em;
+}
+
+.confirm h3 {
+   text-align: center;
+}
+
+.confirm h2{
+   margin-left: 1em;
+   font-size: 1.3em;
+}
+
+.confirm p{
+   margin-left: 1.4em;
+}
+/* wish */
+.wishlist h3{
+   text-align: center;
+}
+
+.wishlist div{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+}
+
 /* footer */
 
 footer p{
